@@ -1,5 +1,3 @@
-
-````markdown
 # 📘 DAX Measures Documentation  
 ### *Income & Expense Management Dashboard – Power BI Project*  
 
