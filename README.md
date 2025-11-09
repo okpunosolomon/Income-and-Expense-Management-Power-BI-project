@@ -2,105 +2,135 @@
 
 ## 📊 Executive Summary
 **Business Problem:**  
-Many organizations track budgets manually or in fragmented spreadsheets, making it difficult to compare income and expense performance across multiple departments and years. This leads to late financial insights, poor cost control, and inefficient allocation of resources.
+Many organizations still track budgets manually or in fragmented spreadsheets, making it hard to compare income and expenses across departments or financial years. This results in slow insight delivery, cost overruns, and missed opportunities for optimization.
 
 **Solution:**  
-This project introduces an interactive **Power BI dashboard** that integrates Excel-cleaned financial data and Power Query transformations to monitor **Actual vs Budget performance** over a six-year period (2019–2024).  
-The dashboard dynamically visualizes **income efficiency, expense variance, and overall financial sustainability** using DAX-driven KPIs and visual indicators.
+This project delivers an **interactive Power BI dashboard** that integrates cleaned Excel data and Power Query transformations to monitor **Actual vs Budget performance** (2019–2024).  
+It provides real-time tracking of **income efficiency**, **expense control**, and **variance trends**, powered by DAX-based KPIs and SVG visuals.
 
-**Impact in Numbers:**  
-- Reduced reporting time from hours to minutes.  
-- Achieved 100% visibility of over- and under-spending across five major projects.  
-- Enabled proactive budget control through variance alerts and performance KPIs.
-
-**Next Steps:**  
-Integrate Power Automate alerts for overspending thresholds and embed dashboard insights into Teams for real-time collaboration.
+**Impact:**  
+- Cut manual financial reporting time from hours to minutes.  
+- Achieved full visibility of over- and under-spending across five key projects.  
+- Enabled proactive budget decisions using automated variance indicators.
 
 ---
 
 ## 🧩 Business Problem
-The finance team struggled to consolidate project-level income and expenses into a single view that clearly compared **actuals vs budgets**.  
-Data existed in multiple Excel sheets with inconsistent formatting, limiting the ability to evaluate trends, detect overspending, or justify budget reallocations.
+The finance department needed a single, interactive view to track project-level performance.  
+Scattered Excel reports made it difficult to assess:
+- Are projects staying within approved budgets?  
+- Which departments consistently overspend?  
+- How close is actual income to planned targets?  
+- What trends can inform more accurate forecasts?
 
-The key questions this project aimed to answer were:
-1. Are projects staying within their budget limits?  
-2. Which years or departments show recurring overspending?  
-3. How efficiently is income performing against the budget target?  
-4. What trends can inform better forecasting and decision-making?
+This dashboard centralizes those answers — bridging analytics with financial strategy.
 
 ---
 
 ## ⚙️ Methodology
-### Data Source and Cleaning  
-- Source: *Project_Monthly_Performance_2019_2024.xlsx*  
-- Tools: **Microsoft Excel** and **Power BI Power Query**  
-- Steps:  
-  - Removed duplicates and missing entries.  
-  - Standardized numeric and currency formats.  
-  - Created calculated fields for income and expense variance.  
-  - Normalized month/year dimensions for time-series analysis.  
 
-### Data Transformation  
-- Established relationships between **Project_ID**, **Income**, and **Expense** tables.  
-- Built **KPI measures** in DAX for performance ratios and variance indicators.  
-- Implemented **color-coded SVG visuals** to show real-time budget performance directly inside Power BI tables.
+### Data Source & Cleaning  
+**Dataset:** `Project_Monthly_Performance_2019_2024.xlsx`  
+**Tools Used:** Microsoft Excel and Power BI  
+
+Key cleaning steps included:  
+- Removing duplicates and null values  
+- Standardizing date and numeric formats  
+- Creating variance and ratio fields  
+- Normalizing project and time dimensions  
+
+### Data Transformation in Power BI  
+- Built relationships between **Project_ID**, **Income**, and **Expense** tables  
+- Developed **KPI measures** using DAX for performance ratios and variance %  
+- Applied **color-coded SVG visuals** for intuitive, dynamic performance indicators  
 
 ---
 
 ## 🧠 Skills & Tools Demonstrated
-- **Excel:** Data cleaning, formatting, and initial KPI calculations.  
+- **Excel:** Data cleaning and KPI base calculations  
 - **Power BI:**  
-  - Data modelling and Power Query transformations.  
-  - DAX measures for variance, percentage KPIs, and dynamic visuals.  
-  - Interactive filters (Year, Month, Project ID).  
+  - Data modeling and Power Query transformations  
+  - DAX measures for ratios, variance %, and KPIs  
+  - Interactive slicers for Year, Month, and Project ID  
 - **Visualization Design:**  
-  - Custom SVG charts (donut and bar indicators).  
-  - Card KPIs with variance trends.  
-  - Color logic:  
-    - 🟢 < 95% (on target)  
-    - 🟠 = 95% (caution)  
-    - 🔴 > 95% (overspend)  
+  - Custom SVG charts (bar and donut progress visuals)  
+  - Card visuals for variance %  
+  - Conditional color logic for easy insight recognition  
+
+**Color Logic:**  
+🟢 < 95% → On Target | 🟠 = 95% → Caution | 🔴 > 95% → Overspend  
 
 ---
 
-## 📈 Results & Business Insights
-The dashboard provides clear, actionable insights:
-- **Income Performance:** Departments consistently exceeding income budgets (up to +6.9%) were identified as scalable models.  
-- **Expense Control:** Expense variances showed significant improvement, with most projects maintaining < 95% of their expense budget.  
-- **Trend Analysis:** The 2022 period showed a peak in expense control efficiency and income performance recovery post-2020 downturn.  
-- **Transparency:** Each project’s actual vs budget comparison is visible, fostering accountability and faster decision-making.
+## 🧱 Data Model Overview  
+*(Relationships between Income, Expense, and Date tables)*  
 
-### Sample Visuals
-#### ✅ Executive Dashboard Overview  
-*(Actual vs Budget summary view)*  
-![Dashboard Preview](visuals/dashboard_preview.png)
-
-#### 📊 Project-Level Performance  
-*(Yearly income and expense variance trends)*  
-![Key Metrics Screenshot](visuals/key_metrics_screenshot.png)
+![Data Model](visuals/Model%20View.png)
 
 ---
 
-## 🪄 Key DAX Highlights
-- **% of Income Budget** → measures how much of the income target was achieved.  
-- **% of Expense Budget** → tracks expense utilization against plan.  
-- **Variance % with Arrows** → dynamic indicators of financial direction.  
-- **SVG Donut and Bar Charts** → enhance KPI visuals directly within Power BI without custom visuals.  
+## 🖥️ Dashboard Overview  
+*(Actual vs Budget executive summary view)*  
 
-All DAX formulas are documented in the [`/dax-measures`](./dax-measures) folder.
+![Dashboard Overview](visuals/Report%20View.png)
+
+---
+
+## 📈 Key Insights & Visual Highlights
+
+### Income vs Budget Performance
+Shows how each project performed against its income target between 2019–2024.  
+Green KPIs indicate targets exceeded; red highlights shortfalls.
+
+![Income View](visuals/Screenshot%202025-11-09%20110553.png)
+
+---
+
+### Expense Efficiency & Control
+Tracks actual expenses versus budgets with DAX-based variance arrows and custom SVG donuts.  
+Helps identify where cost reduction or budget reallocation is needed.
+
+![Expense View](visuals/Screenshot%202025-11-09%20110643.png)
+
+---
+
+### Yearly Project Trends
+Displays variance across multiple fiscal years — supporting both short-term and long-term budget planning.
+
+![Trends View](visuals/Screenshot%202025-11-09%20110713.png)
+
+---
+
+### Performance Across Projects
+Summarized comparison for all projects, enabling leadership to focus on outliers and replicate high-performing models.
+
+![Project Comparison](visuals/Screenshot%202025-11-09%20110738.png)
+
+---
+
+## 🪄 DAX Highlights  
+Some key measures that power this dashboard:
+
+- **% of Income Budget** → Measures how much of the income target was achieved  
+- **% of Expense Budget** → Tracks utilization against planned spending  
+- **Variance % with Arrows** → Adds direction symbols (▲ / ▼) to clarify trends  
+- **SVG Donut & Bar Charts** → Generate visual KPIs directly from DAX logic  
+
+📘 Full documentation available in [`/powerbi-files/README_DAX.md`](./powerbi-files/README_DAX.md)
 
 ---
 
 ## 🚀 Next Steps
-- Automate weekly financial alerts using **Power Automate**.  
-- Connect Power BI with **SharePoint Lists** for live project budget updates.  
-- Expand dashboard scope to include **Profit Margin** and **ROI** metrics.  
-- Publish insights to **Power BI Service** for real-time stakeholder collaboration.
+1. Integrate **Power Automate** alerts for variance thresholds.  
+2. Link to **SharePoint Lists** for live data refresh.  
+3. Extend metrics to include **ROI** and **Profit Margin** analysis.  
+4. Deploy via **Power BI Service** for real-time collaboration.
 
 ---
 
 ## 🏁 Summary
-This project demonstrates a practical, end-to-end financial performance monitoring solution — from Excel data cleaning to Power BI visualization — built with business impact in mind.  
-It combines technical precision with strategic design to help organizations stay agile, informed, and financially accountable.
+This project demonstrates a complete data-to-decision workflow:  
+from **Excel cleaning and Power Query transformation** to **Power BI visualization and automation planning**.  
+It combines analytics, design, and storytelling to help organizations monitor and optimize financial performance effectively.
 
 ⭐ *“What gets measured gets improved — and what’s visualized gets understood.”*
