@@ -275,6 +275,6 @@ This file represents a complete DAX reference for the *Income and Expense Manage
 
 ---
 
-⭐ *“Data alone tells a story — DAX gives it a voice.”*
+⭐ *“Data alone tells a story, DAX gives it a voice.”*
 
 ```
