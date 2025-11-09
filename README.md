@@ -133,4 +133,4 @@ This project demonstrates a complete data-to-decision workflow:
 from **Excel cleaning and Power Query transformation** to **Power BI visualization and automation planning**.  
 It combines analytics, design, and storytelling to help organizations monitor and optimize financial performance effectively.
 
-⭐ *“What gets measured gets improved — and what’s visualized gets understood.”*
+⭐ *“What gets measured gets improved, and what’s visualized gets understood.”*
