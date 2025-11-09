@@ -1,9 +1,51 @@
-The dataset used in this project, Project_Monthly_Performance_2019_2024.xlsx, captures six years of detailed financial performance data across multiple projects and departments. It provides a structured view of income and expenses between 2019 and 2024, serving as the analytical foundation for understanding budget efficiency, cost trends, and overall financial sustainability. The data was sourced from internal project performance records maintained in Excel, containing more than a thousand individual transaction entries.
+## 📁 Dataset Description  
 
-Each record represents a monthly snapshot of project activity, including key financial metrics such as income and expense actuals, their corresponding budgets, and computed variances. Core fields include the project identifier, fiscal year, month, income and expense values (both actual and budgeted), performance variance, and remarks that offer context for adjustments or anomalies. Together, these fields create a complete view of how financial targets align with real outcomes across departments and time periods.
+The dataset used in this project, **Project_Monthly_Performance_2019_2024.xlsx**, contains six years of financial records covering **income and expense performance** for multiple projects and departments.  
+It serves as the foundation for analyzing budget efficiency, cost trends, and income sustainability over time.  
 
-The cleaning and preparation process began in Microsoft Excel, where raw data was refined to ensure accuracy and consistency. This involved removing duplicates, handling missing values, and normalizing numeric and currency formats. Dates were standardized, and calculated fields such as variance and percentage of budget were introduced to enhance analytical depth. Data integrity was verified across all fiscal years before being imported into Power BI.
+### 🧾 Data Overview  
+- **Time Frame:** 2019 – 2024  
+- **Data Source:** Internal project performance tracking records (Excel-based)  
+- **File Type:** `.xlsx`  
+- **Size:** Approximately 1000+ transactional entries  
 
-Once inside Power BI, further transformation took place using Power Query. Columns were renamed for readability, data types were corrected, and key performance indicators such as Income Variance Percentage and Expense Variance Percentage were derived. Invalid or incomplete records were filtered out, and logical relationships between lookup tables and performance data were established to support efficient modeling and visualization.
+### 🧩 Key Columns  
+| Column Name | Description |
+|--------------|-------------|
+| `Project_ID` | Unique identifier for each project or department |
+| `Year` | Fiscal year of the record |
+| `Month` | Month of transaction (used for time series trend analysis) |
+| `Income_Actual` | Actual income recorded for that month/project |
+| `Income_Budget` | Target income set for performance comparison |
+| `Expense_Actual` | Actual expense recorded for that month/project |
+| `Expense_Budget` | Planned or approved expense |
+| `Variance` | Difference between budgeted and actual values |
+| `% of Budget` | KPI metric measuring performance against target |
+| `Remarks` | Qualitative notes or adjustments (where applicable) |
 
-The final dataset enables analysis of financial trends across a six-year period, helping to evaluate income and expense patterns, measure actuals against budget, and identify cost optimization opportunities. It also supports year-over-year comparisons, offering valuable insights for long-term financial planning and sustainability. Ultimately, this dataset forms the backbone of the Income and Expense Management Dashboard, transforming raw data into actionable intelligence that drives strategic business decisions.
+### ⚙️ Data Cleaning & Preparation  
+Initial cleaning was performed in **Microsoft Excel** before transformation in Power BI.  
+Steps included:
+- Removing duplicates and null entries  
+- Normalizing numeric formats and currency signs  
+- Standardizing month and year formats  
+- Creating calculated fields for variance and budget ratios  
+- Verifying consistency across fiscal years  
+
+### 🧮 Data Transformation (Power Query)
+After upload to Power BI, **Power Query Editor** was used for:  
+- Column renaming and type correction  
+- Deriving KPI columns (`Income Variance %`, `Expense Variance %`)  
+- Filtering out invalid records  
+- Establishing relationships with performance lookup tables  
+
+### 🎯 Purpose  
+This dataset enables the analysis of:
+- Income and expense trends over six fiscal years  
+- Actual vs. budget performance at project level  
+- Cost optimization opportunities  
+- Year-over-year sustainability insights  
+
+---
+
+⭐ *The dataset forms the analytical backbone of the Income & Expense Management Dashboard — empowering insights into financial efficiency and strategic planning.*
