@@ -2,7 +2,7 @@
 ### *Income & Expense Management Dashboard – Power BI Project*  
 
 This document provides a complete overview of all DAX measures used to develop the **Income and Expense Management Dashboard**.  
-It combines **core financial calculations** and **advanced SVG-based KPI visuals**, showing how analytical logic and design come together to drive financial insight in Power BI.  
+It combines **core financial calculations** and **advanced SVG-based KPI visuals**, showing how analytical logic and design come together to drive financial insight in Power BI.
 
 ---
 
